@@ -1,0 +1,44 @@
+﻿extends layout
+
+block content
+    
+    a(href='../') <- Back To Cart List
+    h1 CRUD Item Shop
+    // Wrapper
+    #wrapper
+
+        // ITEM LIST
+        h2 Item List
+        #itemList
+            table
+                thead
+                    th(width='100', align='left') Name
+                    th(width='200', align='left') Description
+                    th(width='100', align='left') Image
+                    th(width='100', align='left') Size
+                    th(width='100', align='left') Color
+                    th(width='100', align='left') Price
+                    th(width='100', align='left') Update
+                    th(width='100', align='left') Delete
+                tbody
+        // /ITEM LIST
+
+        // ADD ITEM
+        h2 Create / Update Item
+        #ItemField
+            fieldset
+                a#newitem(href='#') New Item
+                br
+                input#Name(type='text', placeholder='Name')
+                input#Description(type='text', placeholder='Description')
+                input#Imagelink(type='text', placeholder='Imagelink')
+                br
+                input#Size(type='text', placeholder='Size')                
+                input#Color(type='text', placeholder='Color')
+                input#Price(type='text', placeholder='Price')
+                br
+                button#btnAddItem Create Item
+                button#btnUpdateItem(hidden='true') Update Item
+        // /ADD ITEM
+
+    // /WRAPPER

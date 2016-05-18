@@ -1,0 +1,25 @@
+﻿extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  a(href='/items') Manage Items
+  div -----
+  a(href='/coupons') Manage Discount Coupon
+  // ITEM LIST
+  h2 Cart List
+  h3
+      a(href='/cart') Let's Buy Something
+  #cartlist
+    table
+        thead
+            th(width='100', align='left') Buyer
+            th(width='200', align='left') Address
+            th(width='100', align='left') Total Item
+            th(width='100', align='left') Total Price
+            th(width='100', align='left') Total Discount
+            th(width='100', align='left') Total Payment
+            th(width='100', align='left') Delete Cart
+        tbody
+// /ITEM LIST

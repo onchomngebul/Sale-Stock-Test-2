@@ -1,0 +1,57 @@
+﻿extends layout
+
+block content
+  //a(href='/cart/cancelorder/#{iniID}') <- Cancel Order
+  a(href='../') <- Back To Cart List
+  h1= title
+  //h2= iniID
+  p Welcome to #{title}
+
+    #CartField(rel='#{iniID}')
+    fieldset
+        input#Buyer(type='text', placeholder='Buyer')
+        input#Address(type='text', placeholder='Address')
+
+  h2 Item List
+  #shoplist
+    table
+        thead
+            th(width='100', align='left') Name
+            th(width='200', align='left') Description
+            th(width='100', align='left') Image
+            th(width='100', align='left') Size
+            th(width='100', align='left') Color
+            th(width='100', align='left') Price
+            th(width='100', align='left') Add to Cart
+        tbody
+
+  h2 Item in Cart
+  h4
+    #datacart
+  #cartitem
+    table
+        thead
+            th(width='100', align='left') Name
+            th(width='200', align='left') Description
+            th(width='100', align='left') Image
+            th(width='100', align='left') Size
+            th(width='100', align='left') Color
+            th(width='100', align='left') Price
+            th(width='100', align='left') Remove from Cart
+        tbody
+       
+    #totalitem         
+    #totalprice
+
+    #kodeCoupon
+    fieldset
+        input#Kode(type='text', placeholder='Code Coupon')
+        button#checkCoupon Check Coupon
+
+    h4
+        #datapayment
+
+    #totaldiscount(rel='0')       
+    #totalpayment
+
+  button#BuyAll BUY ALL

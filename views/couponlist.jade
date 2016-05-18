@@ -1,0 +1,44 @@
+﻿extends layout
+
+block content
+    
+    a(href='../') <- Back To Cart List
+    h1 CRUD Item Shop
+    // Wrapper
+    #wrapper
+
+        // COUPON LIST
+        h2 Coupon List
+        #couponList
+            table
+                thead
+                    th(width='100', align='left') Coupon Title
+                    th(width='200', align='left') Kode
+                    th(width='100', align='left') Minimal Purchase
+                    th(width='100', align='left') Percent Discount
+                    th(width='100', align='left') Maks Discount
+                    th(width='100', align='left') Is Aktif?
+                    th(width='100', align='left') Update
+                    th(width='100', align='left') Delete
+                tbody
+        // /COUPON LIST
+
+        // ADD COUPON
+        h2 Create / Update Coupon
+        #CouponField
+            fieldset
+                a#newcoupon(href='#') New Coupon
+                br
+                input#Title(type='text', placeholder='Title')
+                input#Kode(type='text', placeholder='Kode')
+                input#Minpurchase(type='text', placeholder='Minpurchase')
+                br
+                input#Percent(type='text', placeholder='Percent')                
+                input#Maksdiscount(type='text', placeholder='MaksDiscount')
+                input#Isaktif(type='text', placeholder='Isaktif')
+                br
+                button#btnAddCoupon Create Coupon
+                button#btnUpdateCoupon(hidden='true') Update Coupon
+        // /ADD COUPON
+
+    // /WRAPPER
