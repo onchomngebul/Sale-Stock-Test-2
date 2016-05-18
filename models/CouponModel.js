@@ -17,7 +17,8 @@ var CouponSchema = new Schema({
 // we need to create a model using it
 var Coupon = mongoose.model('Coupon', CouponSchema, 'couponlist');
 
-mongoose.connect('mongodb://localhost:27017/shopdb');
+//mongoose.connect('mongodb://localhost:27017/shopdb');
+mongoose.connect('mongodb://bucho:1234@ds036069.mlab.com:36069/shopdb');
 
 // make this available to our users in our Node applications
 module.exports = Coupon;
